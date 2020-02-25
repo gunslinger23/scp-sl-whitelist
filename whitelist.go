@@ -29,12 +29,12 @@ func main() {
 		if checkIP(ip) {
 			err := whitelist.Add(ip, ipTimeout)
 			if err == nil {
-				c.String(200, "您的IP %s 成功加入白名单，可以开始玩耍啦~", ip)
+				c.String(200, "Your IP %s is in whitelist now, happy gaming~", ip)
 				return
 			}
 		}
 
-		c.String(403, "看起来出现了问题，要不咱们重新打开试试？")
+		c.String(403, "It look like we have a trouble, try again?")
 	})
 	r.Run(":" + strconv.Itoa(webPort))
 }

@@ -18,3 +18,5 @@ go build
 ```bash
 sudo ./start.sh
 ```
+
+3. Visit the website to join whitelist ` http://ip:2333/whitelist `
